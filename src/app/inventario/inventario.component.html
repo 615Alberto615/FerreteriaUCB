@@ -3,7 +3,6 @@
 <div class="inventory-container">
   <h2>Lista de Productos</h2>
   
-  <!-- Agregar/Editar producto -->
   <div class="add-product-container">
     <h3>{{ editMode ? 'Editar Producto' : 'Agregar Producto' }}</h3>
     <form (submit)="editMode ? updateProduct() : addProduct($event)">
@@ -25,7 +24,7 @@
       <button *ngIf="editMode" (click)="cancelEdit()" class="btn-cancel">Cancelar</button>
     </form>
   </div>
-  
+  <br><br><br>
   <!-- Lista de productos -->
   
   <div class="product-list-container">
@@ -37,4 +36,7 @@
       <button class="btn-delete" (click)="deleteProduct(product)">Eliminar</button>
     </div>
   </div>
+
+  <br><br><br>
+</div>
 <app-footer></app-footer>
