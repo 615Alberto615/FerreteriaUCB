@@ -1,35 +1,62 @@
 <!-- home.component.html -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ferretería UCB</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/inventario">Inventario</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/pedidos">Pedidos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contactos">Contactos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row justify-content-center align-items-center vh-100">
-      <div class="col-md-6 text-center">
-        <img src="assets/if.jpg" class="img-fluid" alt="Imagen Ferretería">
-        <h1 class="mt-3">Ferretería UCB</h1>
-        <p class="lead">Bienvenidos a Ferretería UCB, tu lugar de confianza para todas tus necesidades de herramientas y materiales de construcción. Aquí encontrarás los productos más vendidos del mercado a los mejores precios.</p>
-      </div>
+<app-header></app-header>
+<!-- Resto del contenido de la página -->
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Ferretería UCB</h1>
+      <p>Bienvenidos a Ferretería UCB, tu lugar de confianza para encontrar herramientas y materiales de construcción.</p>
     </div>
   </div>
   
+<!-- home.component.html -->
+
+<!-- Sobre Nosotros -->
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card text-center shadow">  <!-- Aquí se añade la clase shadow -->
+          <div class="card-body">
+            <h5 class="card-title">Sobre Nosotros</h5>
+            <p class="card-text">Ferretería UCB ha sido una empresa de confianza durante muchos años, proporcionando productos de alta calidad y servicios excepcionales a nuestra valiosa clientela.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  
+  <!-- Productos más vendidos -->
+  <h2 class="text-center mb-4">Productos más vendidos</h2>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="card shadow">  <!-- Aquí se añade la clase shadow -->
+          <img src="/assets/t1.png" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Tuercas y Tornillos</h5>
+            <p class="card-text">Nuestra gama de tuercas y tornillos de alta resistencia garantiza un montaje seguro y duradero.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow">  <!-- Aquí se añade la clase shadow -->
+          <img src="/assets/t3.png" class="card-img-top" alt="Producto 2">
+          <div class="card-body">
+            <h5 class="card-title">Herramientas Tradicionales</h5>
+            <p class="card-text">Calidad y durabilidad se unen en nuestras herramientas tradicionales, ideales para cualquier trabajo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow">  <!-- Aquí se añade la clase shadow -->
+          <img src="/assets/t5.png" class="card-img-top" alt="Producto 3">
+          <div class="card-body">
+            <h5 class="card-title">Herramientas Electricas</h5>
+            <p class="card-text">Potentes y precisas, nuestras herramientas eléctricas ofrecen un rendimiento excepcional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

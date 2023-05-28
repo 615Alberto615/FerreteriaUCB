@@ -1,1 +1,40 @@
-<p>inventario works!</p>
+<app-header></app-header>
+
+<div class="inventory-container">
+  <h2>Lista de Productos</h2>
+  
+  <!-- Agregar/Editar producto -->
+  <div class="add-product-container">
+    <h3>{{ editMode ? 'Editar Producto' : 'Agregar Producto' }}</h3>
+    <form (submit)="editMode ? updateProduct() : addProduct($event)">
+      <div class="form-group">
+        <label for="productName">Nombre del Producto</label>
+        <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="newProduct.name" required>
+      </div>
+      <div class="form-group">
+        <label for="productImage">Imagen</label>
+        <input type="file" class="form-control" id="productImage" name="productImage" (change)="onFileSelected($event)">
+      </div>
+      
+      <div class="form-group">
+        <label for="productPrice">Precio</label>
+        <input type="number" class="form-control" id="productPrice" name="productPrice" [(ngModel)]="newProduct.price" required>
+      </div>
+
+      <button type="submit" class="btn-submit">{{ editMode ? 'Actualizar' : 'Agregar' }}</button>
+      <button *ngIf="editMode" (click)="cancelEdit()" class="btn-cancel">Cancelar</button>
+    </form>
+  </div>
+  
+  <!-- Lista de productos -->
+  
+  <div class="product-list-container">
+    <div class="product-card" *ngFor="let product of products; let i = index">
+      <h4>{{ product.name }}</h4>
+      <p>{{ product.price }}</p>
+      <img [src]="product.image" alt="Imagen del producto" />
+      <button class="btn-edit" (click)="editProduct(i)">Editar</button>
+      <button class="btn-delete" (click)="deleteProduct(product)">Eliminar</button>
+    </div>
+  </div>
+<app-footer></app-footer>

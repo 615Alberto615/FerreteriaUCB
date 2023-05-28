@@ -4,27 +4,60 @@
   }
   
   h1 {
-    color: #333;
+    color: white;
   }
+  
   
   .lead {
     color: #666;
   }
   
-  .navbar-brand {
-    color: #007BFF;
-    font-weight: bold;
-  }
-  
-  .nav-link {
-    color: #007BFF;
-  }
- .hero{
-    background-image: url('/assets/if.jpg') !important;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    height: 100vh;
-    position: relative;
+ /* home.component.css */
 
- }  
+  
+ .hero {
+  position: relative; 
+  background: url('/assets/if.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45.3%; /* Intenta aumentar esta altura */
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDMyMCI+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZmlsbC1vcGFjaXR5PSIxIiBkPSJNMCwyODhMNjAsMjUwLjdDMTIwLDIxMywyNDAsMTM5LDM2MCwxMjIuN0M0ODAsMTA3LDYwMCwxNDksNzIwLDE4Ni43Qzg0MCwyMjQsOTYwLDI1NiwxMDgwLDIyNEMxMjAwLDE5MiwxMzIwLDk2LDEzODAsNDhMMTQ0MCwwTDE0NDAsMzIwTDEzODAsMzIwQzEzMjAsMzIwLDEyMDAsMzIwLDEwODAsMzIwQzk2MCwzMjAsODQwLDMyMCw3MjAsMzIwQzYwMCwzMjAsNDgwLDMyMCwzNjAsMzIwQzI0MCwzMjAsMTIwLDMyMCw2MCwzMjBMMCwzMjBaIj48L3BhdGg+PC9zdmc+");
+  background-size: 100% 100%; 
+  background-position: bottom;
+}
+
+
+  
+  .hero-content {
+    text-align: center;
+  }.hero-content h1 {
+    font-size: 3.5rem; /* Ajusta el tamaño del texto del h1 */
+}
+
+.hero-content p {
+    font-size: 1.3rem; /* Ajusta el tamaño del texto del p */
+}
+  
+h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+  
+ 

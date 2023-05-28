@@ -1,1 +1,34 @@
-<p>pedidos works!</p>
+<app-header></app-header>
+
+<body>
+    <div class="form-container">
+      <h2>Realizar un Pedido</h2>
+      <form id="orderForm" [formGroup]="orderForm">
+        <div class="form-group">
+          <label for="customerName">Nombre del Cliente</label>
+          <input type="text" class="form-control" formControlName="customerName" placeholder="Ingrese su nombre">
+        </div>
+        <div class="form-group">
+          <label for="customerEmail">Correo Electrónico</label>
+          <input type="email" class="form-control" formControlName="customerEmail" placeholder="Ingrese su correo electrónico">
+        </div>
+        <div class="form-group">
+          <label for="customerPhone">Número de Celular</label>
+          <input type="tel" class="form-control" formControlName="customerPhone" placeholder="Ingrese su número de celular">
+        </div>
+        <div class="form-group">
+          <label for="productName">Producto</label>
+          <input type="text" class="form-control" formControlName="productName" placeholder="Ingrese el nombre del producto">
+        </div>
+        <div class="form-group">
+          <label for="quantity">Cantidad</label>
+          <input type="number" class="form-control" formControlName="quantity" placeholder="Ingrese la cantidad">
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn-submit" (click)="submitForm()">Enviar Pedido</button>
+        </div>
+      </form>
+    </div>
+</body>
+
+<app-footer></app-footer>

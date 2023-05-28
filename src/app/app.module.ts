@@ -8,6 +8,12 @@ import { PedidosComponent } from './pedidos/pedidos.component';
 import { ContactosComponent } from './contactos/contactos.component';
 import { InventarioComponent } from './inventario/inventario.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,14 +21,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     PedidosComponent,
     ContactosComponent,
-    InventarioComponent
+    InventarioComponent,
+    HeaderComponent,
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
+    ,FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
