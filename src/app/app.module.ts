@@ -14,7 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule
     ,FontAwesomeModule,
     FormsModule,
-    ReactiveFormsModule,  
+    ReactiveFormsModule, 
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
